@@ -187,10 +187,10 @@ bindsym $mod+Ctrl+9 move container to workspace number $ws9;
 bindsym $mod+Ctrl+0 move container to workspace number $ws10;
 
 # On lance quelques application au démarrage de la session dans des fenêtres spcécifiques
-exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
+
+exec --no-startup-id i3-msg 'workspace 1; exec urxvt; workspace 2'
 exec --no-startup-id i3-msg 'workspace 2; exec google-chrome-stable'
 # Pour cette dernière commande, l'ajout de "; workspace 1" permet de revenir au premier workspace
-exec --no-startup-id i3-msg 'workspace 7; exec thunderbird; workspace 1'
 
 # On définit le workspace par défaut des applications lancées après le démarrage
 # On trouve les class grace à xprop (WM_CLASS)
