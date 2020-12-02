@@ -1,0 +1,81 @@
+## Police
+URxvt.font: xft:DejaVu Sans Mono:regular:size=14
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:size=14
+URxvt.italicFont: xft:DejaVu Sans Mono:italic:size=14
+
+
+## Espacement des lettres (on peut mettre des valeurs négatives pour resserrer les lettres)
+URxvt.letterSpace: 0
+
+## scrollbar
+
+URxvt.scrollstyle: plain
+URxvt.scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWidthBuffer: true
+URxvt.scrollTtyKeypress: true
+
+## Extensions perl
+
+URxvt.perl-ext-common: default,matcher,keyboard-select
+
+## Option suplémentaire pour matcher (1: bouton gauche, 2:milieu, 3:droit)
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 3 
+
+
+## Option de défilement
+URxvt*scrollTtyKeypress:  true
+
+## Déactive la barre de défilement
+URxvt*scrollBar:  false
+
+## Cursor
+URxvt.cursorBlink:          true 
+URxvt.cursorColor:          #335B72
+URxvt.cursorUnderline:      false
+
+## Pointer
+URxvt.pointerBlank:         true
+
+
+## Transparance et divers
+URxvt.depth:                32
+! URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+## Couleur du theme Im not Gentoo https://github.com/AntSunrise/URxvt-themes, un peu modifié afin de correspondre à mes envies
+
+urxvt*background:       #212629
+urxvt*foreground:       #737c80
+!black
+URxvt*color0:           #111313
+URxvt*color8:           #797979
+!red
+URxvt*color1:           #9e6b71
+URxvt*color9:           #b69094
+!green
+URxvt*color2:           #719e6b
+URxvt*color10:          #94b690
+!yellow
+URxvt*color3:           #9e986c
+URxvt*color11:          #b5b18f
+!blue
+URxvt*color4:           #6c8b9e
+URxvt*color12:          #90a7b6
+!magenta
+URxvt*color5:           #986b9e
+URxvt*color13:          #b290b6
+!cyan
+URxvt*color6:           #6b9e98
+URxvt*color14:          #90b6b3
+!white
+URxvt*color7:           #b8baba
+URxvt*color15:          #cdcfce
