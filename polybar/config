@@ -17,12 +17,17 @@
 ;==========================================================
 
 [colors]
+
+; On commence par définir les couleurs principales
+
 ;background = ${xrdb:color0:#222}
 background = #8C1e1e1e
 background-alt = #4D1e1e1e
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
+
+; Primary est la couleur des barres de soulignement
 primary = #1E90FF
 secondary = #BB0BOB
 alert = #bd2c40
@@ -33,25 +38,34 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
+
+; Radius fixe l'arrondi des extrêmités de la barre ( 0 = pas d'arrondis)
 radius = 6.0
 fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+; Taille de la ligne de soulignement
 line-size = 2
 line-color = #f00
 
+; Espace entre la barre et les fenêtres
 border-size = 0
 border-color = #00000000
 
+; Espace entre les extrêmités de la barre et l'écran
 padding-left = 0
 padding-right = 2
 
+; Espace entre les modules
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = misc fixed:pixelsize=12;1
+; Police d'écriture principale
+font-0 = DejaVu Sans Mono:size=8;1
+
+; Nécessaire pour que les icones de FontAwesome fonctionnent
 font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 
 ; FontAwesome5 Utiliser la sheetcheat pour trouver les icones
@@ -59,6 +73,7 @@ font-2 = FontAwesome5Free:style=Solid:size=10;4
 font-3 = FontAwesome5Free:style=Regular:size=10;4
 font-4 = FontAwesome5Brands:style=Regular:size=10;4
 
+; Position des différents modules
 modules-left = i3
 modules-center = 
 modules-right = filesystem wlan eth pulseaudio temperature memory cpu battery date 
@@ -66,6 +81,7 @@ modules-right = filesystem wlan eth pulseaudio temperature memory cpu battery da
 ;On définit un séparateur ici la pipe
 separator = |
 
+; Pour les Tray comme le bluetooth
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -81,11 +97,15 @@ tray-padding = 2
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
+; Comportement de la souris
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 
+; ICI COMMENCE LES MODULES
+
 [module/filesystem]
+; Pour connaitre l'espace disque
 type = internal/fs
 interval = 25
 
@@ -97,6 +117,8 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 
 [module/i3]
+; Pour définir les icones et le comportement des différent bureaux
+; Si on utilise des icônes, il faut remplacer tous les %index% par %icon%
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -185,6 +207,8 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
+
+; Remplacer wlp3s0 par le nom de votre interface wifi
 interface = wlp3s0
 interval = 3.0
 
@@ -207,6 +231,8 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
+
+; Remplacer enp5s0 par le nom de votre interface ethernet
 interface = enp5s0
 interval = 3.0
 
@@ -225,7 +251,7 @@ label-disconnected-foreground = #80FFFFFF
 type = internal/date
 interval = 5
 
-date  = " %d-%m-%Y"
+date  = " %d/%m"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -247,7 +273,10 @@ label-volume-foreground = ${root.foreground}
 label-muted = 
 label-muted-foreground = #666
 
+; Longeur de la barre de volume
 bar-volume-width = 8 
+
+; Couleur de la barre en fonction du volume
 bar-volume-foreground-0 = #1e90ff
 bar-volume-foreground-1 = #1e90ff
 bar-volume-foreground-2 = #1e90ff
@@ -316,6 +345,8 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+; FIN DES MODULES
 
 
 [settings]
