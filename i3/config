@@ -31,7 +31,7 @@ exec xrdb .Xresources
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Fond d'écran (feh ou nitrogen)
 exec --no-startup-id feh --bg-scale /home/romain/Images/Wallpapers/3girls.png /home/romain/Images/Wallpapers/mobydick2560.png
@@ -217,6 +217,10 @@ bindsym $mod+Shift+r restart
 # Pour quitter i3
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Pour verrouiller l'écran
+bindsym $mod+Ctrl+l exec i3lock -e -t -i /home/romain/Images/ilock/gentoo1.png
+
 
 # Pour redimmentionner les fenêtres: mod + r pour entrer dans le mode resize
 # resize window (you can also use the mouse for that)
